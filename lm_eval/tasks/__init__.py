@@ -1,6 +1,14 @@
 from pprint import pprint
 from typing import List, Union
 
+from . import tempReasonL1_future
+from . import tempReasonL1
+from . import tempReasonL2
+from . import tempReasonL3
+from . import timeQuestionsEXAQT
+from . import timesensitiveqa_easy
+from . import timesensitiveqa_hard
+from . import templama
 import sacrebleu
 import lm_eval.base
 
@@ -317,6 +325,15 @@ TASK_REGISTRY = {
     "crows_pairs_french_nationality": crowspairs.CrowsPairsFrenchNationality,
     "crows_pairs_french_physical_appearance": crowspairs.CrowsPairsFrenchPhysicalAppearance,
     "crows_pairs_french_autre": crowspairs.CrowsPairsFrenchAutre,
+    # temporal datasets
+    "temp_reason_l1": tempReasonL1.TempReasonL1,
+    "temp_reason_l2": tempReasonL2.TempReasonL2,
+    "temp_reason_l3": tempReasonL3.TempReasonL3,
+    "temp_reason_l1_future": tempReasonL1_future.TempReasonL1Future,
+    "time_qestions_exaqt": timeQuestionsEXAQT.TimeQestionsEXAQT,
+    "temp_lama": templama.TempLAMA,
+    "time_sensitive_qa_easy" : timesensitiveqa_easy.TimeSensitiveQAEasy, 
+    "time_sensitive_qa_hard" : timesensitiveqa_hard.TimeSensitiveQAHard, 
     # Requires manual download of data.
     # "storycloze_2016": storycloze.StoryCloze2016,
     # "storycloze_2018": storycloze.StoryCloze2018,
